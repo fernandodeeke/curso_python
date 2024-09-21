@@ -43,9 +43,11 @@ np.cross(u,v)
 
 A norma de Frobenius (ou euclidiana) de um vetor  $\mathbf{u}=(u_1,\ldots,u_n)$ é definida por
 
-\[
+```math
+
 |\mathbf{u}|= \sqrt{\Sigma_{i=1}^n|u_i|^2}
-\]
+```math
+
 No Python: 
 
 
@@ -78,9 +80,11 @@ np.sqrt(np.sum(u**2))
 
 A chamada "norma infinito" de um vetor é definida como sendo a maior magnitude entre as componentes:  
 
-\[
+```math
+
 |\mathbf{u}|_{\infty}=\max_i\{{|u_i|},i=1,\ldots,n\}
-\]
+```math
+
 
 Ela é usada em álgebra linear como uma medida do tamanho de um vetor de alta dimensão, uma vez que a norma euclideano tem alto custo computacional. Por exemplo,
 
@@ -108,9 +112,11 @@ NI
 (i) Calcule a projeção do vetor $\mathbf{u}$ na direção de $\mathbf{v}$. 
 
 Devemos calcular a expressão 
-\[
+```math
+
 \mathbf{u}_{\mathbf{v}}=\left(\frac{\mathbf{u}\cdot\mathbf{v}}{|\mathbf{v}|^2}\right)\mathbf{v}
-\]
+```math
+
 
 No Python, 
 
@@ -133,9 +139,11 @@ uv
 
 Para isso podemos usar a relação
 
-\[
+```math
+
 \mathbf{u}\cdot \mathbf{v}=|\mathbf{u}||\mathbf{v}|\cos\theta\,.
-\]
+```math
+
 Em Python,
 
 
@@ -185,9 +193,11 @@ theta*180/np.pi
 
 Devemos lembrar que a área do triângulo $ABC$ pode ser calculada pela fórmula
 
-\[
+```math
+
 A = \frac{1}{2}|\mathbf{AB}\times \mathbf{AC}|,
-\]
+```math
+
 
 sendo $\mathbf{AB}$ ($\mathbf{AC}$) o vetor com origem no ponto $A$ e extremidade no ponto $B$ ($C$). Façamos o cálculo em Python:
 
@@ -221,9 +231,11 @@ Determine o volume do tetraedro com vértices $A =(2,3,1)$, $B = (3,-2,4)$, $C =
 
 O volume do tetraedro é 1/6 do volume do paralepípedo definido pelos vértices acima. O volume do paralelepípedo é dado pela magnitude do produto triplo do vetores definidos pelos vértices $A$, $B$, $C$ e $D$:
 
-\[
+```math
+
 V_t=\frac{1}{6}|\mathbf{AB}\cdot(\mathbf{AC}\times \mathbf{AD})|
-\]
+```math
+
 
 Em Python temos:
 
@@ -251,13 +263,15 @@ Vt
 
 Matrizes são arrays 2-dimensionais. Por exemplo, seja a matriz $3 \times 4$:
 
-\[
+```math
+
 M=\begin{bmatrix}
 -1& 5 & 7 & 4\\
 2 & 3 & 1 & 7\\
 8 & 9 & 6 & 3
 \end{bmatrix}
-\]
+```math
+
 
 Em Python, 
 
@@ -351,12 +365,14 @@ col1
 
 Podemos forma submatrizes. Por exemplo, selecionemos a submatriz 
 
-\[
+```math
+
 \begin{bmatrix}
  1 & 7\\
 6 & 3
 \end{bmatrix}
-\]
+```math
+
 
 
 
@@ -825,33 +841,43 @@ As normas matriciais são amplamente utilizadas em álgebra linear, análise num
 Uma função $ \|\cdot\|: \mathbb{R}^{m \times n} \rightarrow \mathbb{R} $ é considerada uma norma matricial se satisfizer as seguintes condições:
 
 1. Subaditividade (Desigualdade Triangular):
-   \[
+   ```math
+
    \|A + B\| \leq \|A\| + \|B\| \quad \text{para todas as matrizes } A \text{ e } B \text{ de mesma dimensão}.
-   \]
+   ```math
+
 
 2. Multiplicação Escalar:
-   \[
+   ```math
+
    \|\alpha A\| = |\alpha| \cdot \|A\| \quad \text{para todo escalar } \alpha \text{ e matriz } A.
-   \]
+   ```math
+
 
 3. Não-Negatividade e Definitividade:
-  \[
+  ```math
+
    \|A\| \geq 0 \quad \text{e} \quad \|A\| = 0 \text{ se e somente se } A = 0.
-   \]
+   ```math
+
    
 4. Compatibilidade com a Multiplicação Matricial:
-   \[
+   ```math
+
    \|AB\| \leq \|A\| \cdot \|B\| \quad \text{para todas as matrizes } A \text{ e } B \text{ onde o produto } AB \text{ é definido}.
-   \]
+   ```math
+
 
 
 
 Examinemos os principais tipos de normas matriciais:
 
 - Norma 1 (Norma da Coluna Máxima, $ p = 1 $):
-  \[
+  ```math
+
   \|A\|_1 = \max_{1 \leq j \leq n} \sum_{i=1}^{m} |a_{ij}|
-  \]
+  ```math
+
   A norma 1 mede a maior soma absoluta das colunas da matriz.
   
   Em Python, 
@@ -877,9 +903,11 @@ norm1
 
 
 - Norma 2 (Norma Espectral, $ p = 2 $):
-  \[
+  ```math
+
   \|A\|_2 = \sqrt{\lambda_{\text{max}}}\,,
-  \]
+  ```math
+
   sendo  $ \lambda_{\text{max}}$ maior autovalor de $ A^{\dagger}A $. Aqui $A^{\dagger}$ é a matriz hermitiana conjugada de $A$. Se $A$ for real, $A^{\dagger}=A^T$ Em Python, 
 
 
@@ -896,9 +924,11 @@ norm2
 
 
 - Norma Infinito (Norma da Linha Máxima, $ p = \infty $):
-  \[
+  ```math
+
   \|A\|_\infty = \max_{1 \leq i \leq m} \sum_{j=1}^{n} |a_{ij}|
-  \]
+  ```math
+
   
   A norma infinito mede a maior soma absoluta das linhas da matriz. Em Python,
 
@@ -917,9 +947,11 @@ norm_inf
 
 - Norma de Frobenius: 
 
-\[
+```math
+
 \|A\|_F = \sqrt{\sum_{i=1}^{m} \sum_{j=1}^{n} |a_{ij}|^2}
-\]
+```math
+
 
 Esta norma é equivalente à norma 2 para o vetor de elementos da matriz, sendo a raiz quadrada da soma dos quadrados de todos os elementos da matriz. Em Python, 
 
@@ -942,9 +974,11 @@ Normas matriciais podem ser usadas para estabelecer critérios de parada em algo
 
 O número de condicionamento de uma matriz $ A $ é definido como:
 
-\[
+```math
+
 \kappa(A) = \|A\| \cdot \|A^{-1}\|\,,
-\]
+```math
+
 
 sendo $ \|A\| $ a norma da matriz $ A$, e $ \|A^{-1}\| $ é a norma de sua inversa.  
 
@@ -1020,29 +1054,35 @@ cond_num_fro
 
 Consideremos o problema de determinar os autovalores e autovetores da seguinte matriz 
 
-\[
+```math
+
 A = \begin{bmatrix}
 2 & -1 & 0 \\
 1 & 3 & -1 \\
 0 & 2 & 1 \\
 \end{bmatrix}
-\]
+```math
+
 
 Os autovalores $ \lambda $ são determinados pela equação característica:
 
-\[
+```math
+
 \det(A - \lambda I) = 0
-\]
+```math
+
 
 ou seja, 
 
-\[
+```math
+
 \det(A - \lambda I) = \left| \begin{array}{ccc}
 2 - \lambda & -1 & 0 \\
 1 & 3 - \lambda & -1 \\
 0 & 2 & 1 - \lambda \\
 \end{array} \right|=\lambda^3 - 6\lambda^2 + 14\lambda - 11 = 0\,.
-\]
+```math
+
 
 Utilizaremos o Python para encontrar as raízes da equação:
 
@@ -1148,7 +1188,8 @@ np.allclose(A @ v_1,lambda_1 * v_1)
 
 Definiremos funções em Python que realizam as operações elementares sobre linhas de uma matriz que serão úteis para resolver sistemas de equações lineares ou simplesmente, sistemas lineares.  Um [sistema linear](https://pt.wikipedia.org/wiki/Sistema_de_equações_lineares) é um conjunto de equações lineares acopladas entre por meio de variáveis $x_1,\ldots, x_n$, da forma:
 
-\[
+```math
+
 \left\{
 \begin{aligned}
 a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n & = b_1 \\
@@ -1157,12 +1198,14 @@ a_{10}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n & = b_2 \\
 a_{m1}x_1 + a_{m1}x_2 + \cdots + a_{mn}x_n & = b_m \\
 \end{aligned}
 \right.
-\]
+```math
+
 
 Em notação matricial o sistema linear de $n$ equações  e $n$ incógnitas é representado na forma 
  $A X= B$, sendo
 
-\[
+```math
+
 A = \begin{bmatrix}
 a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
@@ -1177,23 +1220,27 @@ x_1 \\\ x_2 \\ \vdots \\ x_n
 b= \begin{bmatrix}
 b_1 \\\ b_2 \\\ \vdots \\ b_n
 \end{bmatrix} 
-\]
+```math
+
 
 **Exemplo.** Consideremos o seguinte sistema de equações lineares:
 
-\[
+```math
+
 \begin{cases}
 2x + 3y - z = 5 \\
 4x + y + 2z = 6 \\
 -2x + 5y + 2z = -1\,.
 \end{cases}
-\]
+```math
+
 
 Nosso objetivo é encontrar os valores de $ x $, $ y $ e $ z $ que satisfaçam simultaneamente todas as três equações.
 
 Utilizaremos a biblioteca NumPy do Python para resolver o sistema.  Na forma matricial reescrevemos o sistema como:
 
-\[
+```math
+
 \begin{bmatrix}
 2 & 3 & -1 \\
 4 & 1 & 2 \\
@@ -1206,15 +1253,18 @@ x \\ y \\ z
 \begin{bmatrix}
 5 \\ 6 \\ -1
 \end{bmatrix}\,,
-\]
+```math
+
 
 com:
 
-\[
+```math
+
 A = \begin{bmatrix} 2 & 3 & -1 \\ 4 & 1 & 2 \\ -2 & 5 & 2 \end{bmatrix}, \quad
 X = \begin{bmatrix} x \\ y \\ z \end{bmatrix}, \quad
 b = \begin{bmatrix} 5 \\ 6 \\ -1 \end{bmatrix}\,.
-\]
+```math
+
 
 Resolvamos este problema em Python,  usando comandos do Numpy:
 
@@ -1265,9 +1315,11 @@ np.dot(A, X)-b
 
 **1.** Dados os vetores
 
-\[
+```math
+
 \mathbf{v}_1=(4,5,3)\,,\quad \mathbf{v}_2=(5,2,6)\,,
-\]
+```math
+
 
 determine o vetor projeção de $\mathbf{v}_1$ na direção de $\mathbf{v}_2$. 
 
@@ -1275,28 +1327,35 @@ determine o vetor projeção de $\mathbf{v}_1$ na direção de $\mathbf{v}_2$.
 
 **3.** Dados os vetores
 
-\[
+```math
+
 \mathbf{v}_1=(2,5,1)\,,\qquad \mathbf{v}_2=(-1,2,-3)\,,\quad \mathbf{v}_3=(-4,1,-7)\,,
-\]
+```math
+
 
 determine o volume do paralelepípedo definido por esses vetores. 
 
 **4.** Verifique  que a norma de Frobenius da matriz
-\[
+```math
+
 M=\begin{bmatrix}
 -3 & 5 & 3 \\
 2 & -5 & 4 \\
 1 & 9 & -2
 \end{bmatrix}
-\]
+```math
+
 pode também ser dada por 
 
-\[
+```math
+
 ||\mathbf{M}||_F=\sqrt{\left(\mbox{Tr}(M M^T\right)}\,.
-\]
+```math
+
 
 **5.** Sejam as matrizes 
-\[ A = 
+```math
+ A = 
 \begin{bmatrix}
 1 & -2 & 3 \\
 4 & 5 & 6 \\
@@ -1308,7 +1367,8 @@ B =
 6 & 3 & 2 \\
 1 & 2 & 3
 \end{bmatrix}\,.
-\]
+```math
+
 
 (i) Determine $C=A^3-AB -4I$, sendo $I$ a matriz identidade $3 \times 3$.
 
@@ -1316,7 +1376,8 @@ B =
 
 **6.** Seja o sistema linear
 
-\[
+```math
+
 \begin{bmatrix}
 -1 & -2 & 3 \\
 4 & 5 & 6 \\
@@ -1333,11 +1394,13 @@ z
 4  \\
 3\,.
 \end{bmatrix}
-\]
+```math
+
 
 Resolva o sistema calculando explicitamente  a expressão: 
 
-\[
+```math
+
 \begin{bmatrix}
 x  \\
 y  \\
@@ -1351,7 +1414,8 @@ z
 4  \\
 3\,.
 \end{bmatrix}
-\]
+```math
+
 
 Note que este não é o método mais eficiente para resolver um sistema linear. 
 
@@ -1359,20 +1423,23 @@ Note que este não é o método mais eficiente para resolver um sistema linear.
 
 **8.** Determine os autovalores e autovetores da matriz
 
-\[
+```math
+
 A = \begin{bmatrix}
 4 & 1 & 2 & 0 \\
 1 & 3 & 0 & 1 \\
 2 & 0 & 2 & 3 \\
 0 & 1 & 3 & 4 \\
 \end{bmatrix}\,.
-\]
+```math
+
 
 
 
 **8.** Resolva o sistema linear dado por 
 
-\[
+```math
+
 \left\{
 \begin{aligned}
 2x_1 + 3x_2 - x_3 + 4x_4 + x_5 & = 7 \\
@@ -1382,6 +1449,7 @@ x_1 + 6x_2 - 3x_3 + 2x_4 + 4x_5 & = 5 \\
 -2x_1 + 4x_2 + 5x_3 - x_4 + 6x_5 & = 1 \\
 \end{aligned}
 \right.
-\]
+```math
+
 
 e verifique o resultado. 
