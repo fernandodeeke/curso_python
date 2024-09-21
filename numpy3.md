@@ -965,7 +965,7 @@ O número de condicionamento de uma matriz `$ A `$ é definido como:
 ```
 
 
-sendo  $`\|A\| `$ a norma da matriz $` A$, e $` \|A^{-1}\| `$ é a norma de sua inversa.  
+sendo  $`\|A\| `$ a norma da matriz $` A`$, e $` \|A^{-1}\| `$ é a norma de sua inversa.  
 
 Esta é uma medida que indica a sensibilidade da solução de um sistema linear em relação a mudanças nos dados de entrada. Um número de condicionamento elevado sugere que a matriz pode causar problemas numéricos, como soluções instáveis ou imprecisas.
 
