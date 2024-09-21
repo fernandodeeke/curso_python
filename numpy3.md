@@ -851,7 +851,7 @@ Uma função $` \|\cdot\|: \mathbb{R}^{m \times n} \rightarrow \mathbb{R} `$ é 
 
 3. Não-Negatividade e Definitividade:
 
-  $` \|A\| \geq 0 \quad `$ e $`\quad \|A\| = 0 $` se e somente se  $`A = 0$`.
+  $` \|A\| \geq 0 \quad `$ e $`\quad \|A\| = 0 `$ se e somente se  $`A = 0`$.
 
 4. Compatibilidade com a Multiplicação Matricial:
 
@@ -861,9 +861,9 @@ Examinemos os principais tipos de normas matriciais:
 
 - Norma 1 (Norma da Coluna Máxima, $` p = 1 `$):
 
-  ```math
-  \|A\|_1 = \max_{1 \leq j \leq n} \sum_{i=1}^{m} \| a_{ij}\|
-  ```
+```math
+  \|A\|_1 = \max_{1 \leq j \leq n} \sum_{i=1}^{m} | a_{ij}|
+```
 
   A norma 1 mede a maior soma absoluta das colunas da matriz.
   
@@ -890,8 +890,8 @@ norm1
 
 
 - Norma 2 (Norma Espectral, $` p = 2 `$ ):
-  ```math
-
+  
+```math
   \|A\|_2 = \sqrt{\lambda_{\text{max}}}\,,
   ```
 
@@ -909,8 +909,7 @@ norm2
 
 - Norma Infinito (Norma da Linha Máxima, $` p = \infty `$):
 
-  ```math
-
+ ```math
   \|A\|_\infty = \max_{1 \leq i \leq m} \sum_{j=1}^{n} |a_{ij}|
   ```
 
