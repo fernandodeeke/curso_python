@@ -860,9 +860,9 @@ Uma função $` \|\cdot\|: \mathbb{R}^{m \times n} \rightarrow \mathbb{R} `$ é 
 Examinemos os principais tipos de normas matriciais:
 
 - Norma 1 (Norma da Coluna Máxima, $` p = 1 `$):
-  ```math
 
-  \|A\|_1 = \max_{1 \leq j \leq n} \sum_{i=1}^{m} |a_{ij}|
+  ```math
+  \|A\|_1 = \max_{1 \leq j \leq n} \sum_{i=1}^{m} \| a_{ij}\|
   ```
 
   A norma 1 mede a maior soma absoluta das colunas da matriz.
