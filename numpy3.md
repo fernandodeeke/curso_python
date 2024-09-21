@@ -1049,7 +1049,7 @@ A = \begin{bmatrix}
 ```
 
 
-Os autovalores $ \lambda $ são determinados pela equação característica:
+Os autovalores $` \lambda $ são determinados pela equação característica:
 
 ```math
 
@@ -1132,7 +1132,7 @@ autovetores
 
 
 
-Verifiquemos os resultados. Por exemplo, examinemos se para o primeiro autovalor $\lambda_1 $ e autovetor $\mathbf{v}_1$ acima temos $A\mathbf{v}_1=\lambda_1 \mathbf{v}_1$:
+Verifiquemos os resultados. Por exemplo, examinemos se para o primeiro autovalor $`\lambda_1 `$ e autovetor $`\mathbf{v}_1`$ acima temos $`A\mathbf{v}_1=\lambda_1 \mathbf{v}_1`$:
 
 
 ```python
@@ -1171,7 +1171,7 @@ np.allclose(A @ v_1,lambda_1 * v_1)
 
 ### 11. Sistemas Lineares 
 
-Definiremos funções em Python que realizam as operações elementares sobre linhas de uma matriz que serão úteis para resolver sistemas de equações lineares ou simplesmente, sistemas lineares.  Um [sistema linear](https://pt.wikipedia.org/wiki/Sistema_de_equações_lineares) é um conjunto de equações lineares acopladas entre por meio de variáveis $x_1,\ldots, x_n$, da forma:
+Definiremos funções em Python que realizam as operações elementares sobre linhas de uma matriz que serão úteis para resolver sistemas de equações lineares ou simplesmente, sistemas lineares.  Um [sistema linear](https://pt.wikipedia.org/wiki/Sistema_de_equações_lineares) é um conjunto de equações lineares acopladas entre por meio de variáveis $`x_1,\ldots, x_n`$, da forma:
 
 ```math
 
@@ -1186,8 +1186,8 @@ a_{m1}x_1 + a_{m1}x_2 + \cdots + a_{mn}x_n & = b_m \\
 ```
 
 
-Em notação matricial o sistema linear de $n$ equações  e $n$ incógnitas é representado na forma 
- $A X= B$, sendo
+Em notação matricial o sistema linear de $`n`$ equações  e $`n`$ incógnitas é representado na forma 
+ $`A X= B`$, sendo
 
 ```math
 
@@ -1220,7 +1220,7 @@ b_1 \\\ b_2 \\\ \vdots \\ b_n
 ```
 
 
-Nosso objetivo é encontrar os valores de $ x $, $ y $ e $ z $ que satisfaçam simultaneamente todas as três equações.
+Nosso objetivo é encontrar os valores de $` x `$, $` y `$ e $` z `$ que satisfaçam simultaneamente todas as três equações.
 
 Utilizaremos a biblioteca NumPy do Python para resolver o sistema.  Na forma matricial reescrevemos o sistema como:
 
@@ -1306,9 +1306,9 @@ np.dot(A, X)-b
 ```
 
 
-determine o vetor projeção de $\mathbf{v}_1$ na direção de $\mathbf{v}_2$. 
+determine o vetor projeção de $`\mathbf{v}_1`$ na direção de $`\mathbf{v}_2`$. 
 
-**2.** Determine a área do triângulo de vértices $(3,4,2)$, $(-2,1,9)$ e $(-4,2,-1)$. 
+**2.** Determine a área do triângulo de vértices $`(3,4,2)`$, $`(-2,1,9)`$ e $`(-4,2,-1)`$. 
 
 **3.** Dados os vetores
 
@@ -1355,9 +1355,9 @@ B =
 ```
 
 
-(i) Determine $C=A^3-AB -4I$, sendo $I$ a matriz identidade $3 \times 3$.
+(i) Determine $`C=A^3-AB -4I`$, sendo $`I`$ a matriz identidade $`3 \times 3`$.
 
-(ii) Use a equação  $det(C-I\lambda)=0$ para encontrar os autovalores de $C$.
+(ii) Use a equação  $`det(C-I\lambda)=0`$ para encontrar os autovalores de $`C`$.
 
 **6.** Seja o sistema linear
 
@@ -1404,7 +1404,7 @@ z
 
 Note que este não é o método mais eficiente para resolver um sistema linear. 
 
-**7.** As matrizes de Hilbert têm a seguinte lei de formação $a_{ij}=1/(i+j-1)$ para $i=1,\cdots,n$. Tais matrizes são muito usadas em testes de algoritmos numéricos, pelo fato de serem mal condicionadas. Construa uma função que calcula o número de condição (usando qualquer tipo de norma) de matrizes de Hilbert de ordem $3\times 3, 4\times 4, \ldots, 40\times 40$. Faça o mesmo para uma matriz de componentes aleatórias. Faça um gráfico simultâneo comparando a variação do número de condição para as duas matrizes. 
+**7.** As matrizes de Hilbert têm a seguinte lei de formação $`a_{ij}=1/(i+j-1)`$ para $`i=1,\cdots,n`$. Tais matrizes são muito usadas em testes de algoritmos numéricos, pelo fato de serem mal condicionadas. Construa uma função que calcula o número de condição (usando qualquer tipo de norma) de matrizes de Hilbert de ordem $`3\times 3, 4\times 4, \ldots, 40\times 40`$. Faça o mesmo para uma matriz de componentes aleatórias. Faça um gráfico simultâneo comparando a variação do número de condição para as duas matrizes. 
 
 **8.** Determine os autovalores e autovetores da matriz
 
