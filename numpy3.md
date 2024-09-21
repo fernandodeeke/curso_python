@@ -45,7 +45,7 @@ A norma de Frobenius (ou euclidiana) de um vetor  $\mathbf{u}=(u_1,\ldots,u_n)$ 
 
 \[
 |\mathbf{u}|= \sqrt{\Sigma_{i=1}^n|u_i|^2}
-\[
+\]
 No Python: 
 
 
@@ -80,7 +80,7 @@ A chamada "norma infinito" de um vetor é definida como sendo a maior magnitude 
 
 \[
 |\mathbf{u}|_{\infty}=\max_i\{{|u_i|},i=1,\ldots,n\}
-\[
+\]
 
 Ela é usada em álgebra linear como uma medida do tamanho de um vetor de alta dimensão, uma vez que a norma euclideano tem alto custo computacional. Por exemplo,
 
@@ -110,7 +110,7 @@ NI
 Devemos calcular a expressão 
 \[
 \mathbf{u}_{\mathbf{v}}=\left(\frac{\mathbf{u}\cdot\mathbf{v}}{|\mathbf{v}|^2}\right)\mathbf{v}
-\[
+\]
 
 No Python, 
 
@@ -135,7 +135,7 @@ Para isso podemos usar a relação
 
 \[
 \mathbf{u}\cdot \mathbf{v}=|\mathbf{u}||\mathbf{v}|\cos\theta\,.
-\[
+\]
 Em Python,
 
 
@@ -187,7 +187,7 @@ Devemos lembrar que a área do triângulo $ABC$ pode ser calculada pela fórmula
 
 \[
 A = \frac{1}{2}|\mathbf{AB}\times \mathbf{AC}|,
-\[
+\]
 
 sendo $\mathbf{AB}$ ($\mathbf{AC}$) o vetor com origem no ponto $A$ e extremidade no ponto $B$ ($C$). Façamos o cálculo em Python:
 
@@ -223,7 +223,7 @@ O volume do tetraedro é 1/6 do volume do paralepípedo definido pelos vértices
 
 \[
 V_t=\frac{1}{6}|\mathbf{AB}\cdot(\mathbf{AC}\times \mathbf{AD})|
-\[
+\]
 
 Em Python temos:
 
@@ -257,7 +257,7 @@ M=\begin{bmatrix}
 2 & 3 & 1 & 7\\
 8 & 9 & 6 & 3
 \end{bmatrix}
-\[
+\]
 
 Em Python, 
 
@@ -356,7 +356,7 @@ Podemos forma submatrizes. Por exemplo, selecionemos a submatriz
  1 & 7\\
 6 & 3
 \end{bmatrix}
-\[
+\]
 
 
 
@@ -827,22 +827,22 @@ Uma função $ \|\cdot\|: \mathbb{R}^{m \times n} \rightarrow \mathbb{R} $ é co
 1. Subaditividade (Desigualdade Triangular):
    \[
    \|A + B\| \leq \|A\| + \|B\| \quad \text{para todas as matrizes } A \text{ e } B \text{ de mesma dimensão}.
-   \[
+   \]
 
 2. Multiplicação Escalar:
    \[
    \|\alpha A\| = |\alpha| \cdot \|A\| \quad \text{para todo escalar } \alpha \text{ e matriz } A.
-   \[
+   \]
 
 3. Não-Negatividade e Definitividade:
   \[
    \|A\| \geq 0 \quad \text{e} \quad \|A\| = 0 \text{ se e somente se } A = 0.
-   \[
+   \]
    
 4. Compatibilidade com a Multiplicação Matricial:
    \[
    \|AB\| \leq \|A\| \cdot \|B\| \quad \text{para todas as matrizes } A \text{ e } B \text{ onde o produto } AB \text{ é definido}.
-   \[
+   \]
 
 
 
@@ -851,7 +851,7 @@ Examinemos os principais tipos de normas matriciais:
 - Norma 1 (Norma da Coluna Máxima, $ p = 1 $):
   \[
   \|A\|_1 = \max_{1 \leq j \leq n} \sum_{i=1}^{m} |a_{ij}|
-  \[
+  \]
   A norma 1 mede a maior soma absoluta das colunas da matriz.
   
   Em Python, 
@@ -879,7 +879,7 @@ norm1
 - Norma 2 (Norma Espectral, $ p = 2 $):
   \[
   \|A\|_2 = \sqrt{\lambda_{\text{max}}}\,,
-  \[
+  \]
   sendo  $ \lambda_{\text{max}}$ maior autovalor de $ A^{\dagger}A $. Aqui $A^{\dagger}$ é a matriz hermitiana conjugada de $A$. Se $A$ for real, $A^{\dagger}=A^T$ Em Python, 
 
 
@@ -898,7 +898,7 @@ norm2
 - Norma Infinito (Norma da Linha Máxima, $ p = \infty $):
   \[
   \|A\|_\infty = \max_{1 \leq i \leq m} \sum_{j=1}^{n} |a_{ij}|
-  \[
+  \]
   
   A norma infinito mede a maior soma absoluta das linhas da matriz. Em Python,
 
@@ -919,7 +919,7 @@ norm_inf
 
 \[
 \|A\|_F = \sqrt{\sum_{i=1}^{m} \sum_{j=1}^{n} |a_{ij}|^2}
-\[
+\]
 
 Esta norma é equivalente à norma 2 para o vetor de elementos da matriz, sendo a raiz quadrada da soma dos quadrados de todos os elementos da matriz. Em Python, 
 
@@ -944,7 +944,7 @@ O número de condicionamento de uma matriz $ A $ é definido como:
 
 \[
 \kappa(A) = \|A\| \cdot \|A^{-1}\|\,,
-\[
+\]
 
 sendo $ \|A\| $ a norma da matriz $ A$, e $ \|A^{-1}\| $ é a norma de sua inversa.  
 
@@ -1026,13 +1026,13 @@ A = \begin{bmatrix}
 1 & 3 & -1 \\
 0 & 2 & 1 \\
 \end{bmatrix}
-\[
+\]
 
 Os autovalores $ \lambda $ são determinados pela equação característica:
 
 \[
 \det(A - \lambda I) = 0
-\[
+\]
 
 ou seja, 
 
@@ -1042,7 +1042,7 @@ ou seja,
 1 & 3 - \lambda & -1 \\
 0 & 2 & 1 - \lambda \\
 \end{array} \right|=\lambda^3 - 6\lambda^2 + 14\lambda - 11 = 0\,.
-\[
+\]
 
 Utilizaremos o Python para encontrar as raízes da equação:
 
@@ -1157,7 +1157,7 @@ a_{10}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n & = b_2 \\
 a_{m1}x_1 + a_{m1}x_2 + \cdots + a_{mn}x_n & = b_m \\
 \end{aligned}
 \right.
-\[
+\]
 
 Em notação matricial o sistema linear de $n$ equações  e $n$ incógnitas é representado na forma 
  $A X= B$, sendo
@@ -1177,7 +1177,7 @@ x_1 \\\ x_2 \\ \vdots \\ x_n
 b= \begin{bmatrix}
 b_1 \\\ b_2 \\\ \vdots \\ b_n
 \end{bmatrix} 
-\[
+\]
 
 **Exemplo.** Consideremos o seguinte sistema de equações lineares:
 
@@ -1187,7 +1187,7 @@ b_1 \\\ b_2 \\\ \vdots \\ b_n
 4x + y + 2z = 6 \\
 -2x + 5y + 2z = -1\,.
 \end{cases}
-\[
+\]
 
 Nosso objetivo é encontrar os valores de $ x $, $ y $ e $ z $ que satisfaçam simultaneamente todas as três equações.
 
@@ -1206,7 +1206,7 @@ x \\ y \\ z
 \begin{bmatrix}
 5 \\ 6 \\ -1
 \end{bmatrix}\,,
-\[
+\]
 
 com:
 
@@ -1214,7 +1214,7 @@ com:
 A = \begin{bmatrix} 2 & 3 & -1 \\ 4 & 1 & 2 \\ -2 & 5 & 2 \end{bmatrix}, \quad
 X = \begin{bmatrix} x \\ y \\ z \end{bmatrix}, \quad
 b = \begin{bmatrix} 5 \\ 6 \\ -1 \end{bmatrix}\,.
-\[
+\]
 
 Resolvamos este problema em Python,  usando comandos do Numpy:
 
@@ -1267,7 +1267,7 @@ np.dot(A, X)-b
 
 \[
 \mathbf{v}_1=(4,5,3)\,,\quad \mathbf{v}_2=(5,2,6)\,,
-\[
+\]
 
 determine o vetor projeção de $\mathbf{v}_1$ na direção de $\mathbf{v}_2$. 
 
@@ -1277,7 +1277,7 @@ determine o vetor projeção de $\mathbf{v}_1$ na direção de $\mathbf{v}_2$.
 
 \[
 \mathbf{v}_1=(2,5,1)\,,\qquad \mathbf{v}_2=(-1,2,-3)\,,\quad \mathbf{v}_3=(-4,1,-7)\,,
-\[
+\]
 
 determine o volume do paralelepípedo definido por esses vetores. 
 
@@ -1288,12 +1288,12 @@ M=\begin{bmatrix}
 2 & -5 & 4 \\
 1 & 9 & -2
 \end{bmatrix}
-\[
+\]
 pode também ser dada por 
 
 \[
 ||\mathbf{M}||_F=\sqrt{\left(\mbox{Tr}(M M^T\right)}\,.
-\[
+\]
 
 **5.** Sejam as matrizes 
 \[ A = 
@@ -1308,7 +1308,7 @@ B =
 6 & 3 & 2 \\
 1 & 2 & 3
 \end{bmatrix}\,.
-\[
+\]
 
 (i) Determine $C=A^3-AB -4I$, sendo $I$ a matriz identidade $3 \times 3$.
 
@@ -1333,7 +1333,7 @@ z
 4  \\
 3\,.
 \end{bmatrix}
-\[
+\]
 
 Resolva o sistema calculando explicitamente  a expressão: 
 
@@ -1351,7 +1351,7 @@ z
 4  \\
 3\,.
 \end{bmatrix}
-\[
+\]
 
 Note que este não é o método mais eficiente para resolver um sistema linear. 
 
@@ -1366,7 +1366,7 @@ A = \begin{bmatrix}
 2 & 0 & 2 & 3 \\
 0 & 1 & 3 & 4 \\
 \end{bmatrix}\,.
-\[
+\]
 
 
 
@@ -1382,6 +1382,6 @@ x_1 + 6x_2 - 3x_3 + 2x_4 + 4x_5 & = 5 \\
 -2x_1 + 4x_2 + 5x_3 - x_4 + 6x_5 & = 1 \\
 \end{aligned}
 \right.
-\[
+\]
 
 e verifique o resultado. 
