@@ -46,7 +46,7 @@ A norma de Frobenius (ou euclidiana) de um vetor  $\mathbf{u}=(u_1,\ldots,u_n)$ 
 ```math
 
 |\mathbf{u}|= \sqrt{\Sigma_{i=1}^n|u_i|^2}
-```math
+```
 
 No Python: 
 
@@ -269,7 +269,7 @@ M=\begin{bmatrix}
 2 & 3 & 1 & 7\\
 8 & 9 & 6 & 3
 \end{bmatrix}
-```math
+```
 
 
 Em Python, 
@@ -900,7 +900,7 @@ norm1
 
 
 
-- Norma 2 (Norma Espectral, $ p = 2 $):
+- Norma 2 (Norma Espectral, $ p = 2 $ ):
   ```math
 
   \|A\|_2 = \sqrt{\lambda_{\text{max}}}\,,
@@ -922,6 +922,7 @@ norm2
 
 
 - Norma Infinito (Norma da Linha Máxima, $ p = \infty $):
+
   ```math
 
   \|A\|_\infty = \max_{1 \leq i \leq m} \sum_{j=1}^{n} |a_{ij}|
