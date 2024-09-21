@@ -10,7 +10,7 @@ Veremos neste notebook como realizar operações algébricas envolvendo 3-vetore
 
 ### 2. Operações com 3-vetores espaciais
 
-Consideremos os vetores $\mathbf{u}=(3,1,2)$ e $\mathbf{v}=(-1,2,-1)$. O produto escalar $\mathbf{u}\cdot \mathbf{v}$ pode ser feito na biblioteca NumPy da seguinte forma: 
+Consideremos os vetores $`\mathbf{u}=(3,1,2)`$ e $`\mathbf{v}=(-1,2,-1)`$. O produto escalar $`\mathbf{u}\cdot \mathbf{v}`$ pode ser feito na biblioteca NumPy da seguinte forma: 
 
 
 ```python
@@ -27,7 +27,7 @@ np.dot(u,v)
 
 
 
-Por outro lado, o produto vetorial $\mathbf{u} \times \mathbf{v}$ é dado por 
+Por outro lado, o produto vetorial $`\mathbf{u} \times \mathbf{v}`$ é dado por 
 
 
 ```python
@@ -41,7 +41,7 @@ np.cross(u,v)
 
 
 
-A norma de Frobenius (ou euclidiana) de um vetor  $\mathbf{u}=(u_1,\ldots,u_n)$ é definida por
+A norma de Frobenius (ou euclidiana) de um vetor  $`\mathbf{u}=(u_1,\ldots,u_n)`$ é definida por
 
 ```math
 
@@ -107,9 +107,9 @@ NI
 
 
 
-**Exemplo 2.1**. Sejam os vetores $\mathbf{u}=(1,4,-1)$ e $\mathbf{v}=(1,3,-5)$. 
+**Exemplo 2.1**. Sejam os vetores $`\mathbf{u}=(1,4,-1)`$ e $`\mathbf{v}=(1,3,-5)`$. 
 
-(i) Calcule a projeção do vetor $\mathbf{u}$ na direção de $\mathbf{v}$. 
+(i) Calcule a projeção do vetor $`\mathbf{u}`$ na direção de $`\mathbf{v} `$. 
 
 Devemos calcular a expressão 
 ```math
@@ -135,7 +135,7 @@ uv
 
 
 
-(ii) Calcule o ângulo $\theta$ entre $\mathbf{u}$ e $\mathbf{v}$. 
+(ii) Calcule o ângulo $`\theta`$ entre $`\mathbf{u}`$ e $`\mathbf{v}`$. 
 
 Para isso podemos usar a relação
 
@@ -189,9 +189,9 @@ theta*180/np.pi
 
 
 
-**Exemplo 2.2** Determine a área do triângulo com vértices $(-2,3,1)$, $(3,2,4)$ e $(2,1,8)$.
+**Exemplo 2.2** Determine a área do triângulo com vértices $`(-2,3,1)`$, $`(3,2,4)`$ e $`(2,1,8)`$.
 
-Devemos lembrar que a área do triângulo $ABC$ pode ser calculada pela fórmula
+Devemos lembrar que a área do triângulo $`ABC`$ pode ser calculada pela fórmula
 
 ```math
 
@@ -199,7 +199,7 @@ A = \frac{1}{2}|\mathbf{AB}\times \mathbf{AC}|,
 ```
 
 
-sendo $\mathbf{AB}$ ($\mathbf{AC}$) o vetor com origem no ponto $A$ e extremidade no ponto $B$ ($C$). Façamos o cálculo em Python:
+sendo $`\mathbf{AB}`$ ($`\mathbf{AC}`$) o vetor com origem no ponto $`A`$ e extremidade no ponto $`B`$ ($`C`$). Façamos o cálculo em Python:
 
 
 ```python
@@ -227,9 +227,9 @@ Area
 
 **Exemplo 2.3**
 
-Determine o volume do tetraedro com vértices $A =(2,3,1)$, $B = (3,-2,4)$, $C = (2,1,8)$ e $D =(-3,1,-2)$.
+Determine o volume do tetraedro com vértices $`A =(2,3,1)`$, $`B = (3,-2,4)`$, $`C = (2,1,8)`$ e $`D =(-3,1,-2)`$.
 
-O volume do tetraedro é 1/6 do volume do paralepípedo definido pelos vértices acima. O volume do paralelepípedo é dado pela magnitude do produto triplo do vetores definidos pelos vértices $A$, $B$, $C$ e $D$:
+O volume do tetraedro é 1/6 do volume do paralepípedo definido pelos vértices acima. O volume do paralelepípedo é dado pela magnitude do produto triplo do vetores definidos pelos vértices $`A`$, $`B`$, $`C$ e $`D`$:
 
 ```math
 
@@ -260,7 +260,7 @@ Vt
 
 ### 3. Matrizes no Numpy
 
-Matrizes são arrays 2-dimensionais. Por exemplo, seja a matriz $3 \times 4$:
+Matrizes são arrays 2-dimensionais. Por exemplo, seja a matriz $`3 \times 4`$:
 
 ```math
 
@@ -289,7 +289,7 @@ M
 
 
 
-A dimensão de $M$ é dada por 
+A dimensão de $`M`$ é dada por 
 
 
 ```python
@@ -333,7 +333,7 @@ M.size
 
 ### 4. Fatiamento de matrizes
 
-Podemos selecionar componentes de $M$ da forma usual. Por exemplo, o elemento da primeira linha e segunda coluna é dado por
+Podemos selecionar componentes de $`M`$ da forma usual. Por exemplo, o elemento da primeira linha e segunda coluna é dado por
 
 
 ```python
@@ -347,7 +347,7 @@ M[0,1]
 
 
 
-Selecionemos a primeira coluna de $M$ para gerar um array 1D: 
+Selecionemos a primeira coluna de $`M`$ para gerar um array 1D: 
 
 
 ```python
@@ -552,7 +552,7 @@ A_int
 
 ### 6. Definindo matrizes por uma lei de formação
 
-Podemos definir uma matriz de acordo com uma lei de formação para seus elementos $a_{ij}$. O modo mais imediato, mas não eficiente,  é o seguinte:
+Podemos definir uma matriz de acordo com uma lei de formação para seus elementos $`a_{ij}$. O modo mais imediato, mas não eficiente,  é o seguinte:
 
 
 ```python
@@ -691,7 +691,7 @@ A@A
 
 
 
-Façamos uma multiplicação matricial. Definimos uma matriz $1 \times 3$(note os dois colchetes, que caracteriza o 2-array):
+Façamos uma multiplicação matricial. Definimos uma matriz $`1 \times 3`$(note os dois colchetes, que caracteriza o 2-array):
 
 
 ```python
@@ -803,7 +803,7 @@ M
 
 
 
-O traço da matriz $M$ (soma dos elementos da diagonal) é dado por 
+O traço da matriz $`M`$ (soma dos elementos da diagonal) é dado por 
 
 
 ```python
@@ -837,12 +837,12 @@ Normas matriciais são funções que atribuem um número real não negativo a um
 
 As normas matriciais são amplamente utilizadas em álgebra linear, análise numérica e outras áreas matemáticas para analisar a estabilidade, sensibilidade e comportamento de operações envolvendo matrizes.
 
-Uma função $ \|\cdot\|: \mathbb{R}^{m \times n} \rightarrow \mathbb{R} $ é considerada uma norma matricial se satisfizer as seguintes condições:
+Uma função $` \|\cdot\|: \mathbb{R}^{m \times n} \rightarrow \mathbb{R} `$ é considerada uma norma matricial se satisfizer as seguintes condições:
 
 1. Subaditividade (Desigualdade Triangular):
    ```math
 
-   \|A + B\| \leq \|A\| + \|B\| \quad \text{para todas as matrizes } A \text{ e } B \text{ de mesma dimensão}.
+  \|A + B\| \leq \|A\| + \|B\| \quad \text{para todas as matrizes } A \text{ e } B \text{ de mesma dimensão}.
    ```
 
 
@@ -870,7 +870,7 @@ Uma função $ \|\cdot\|: \mathbb{R}^{m \times n} \rightarrow \mathbb{R} $ é co
 
 Examinemos os principais tipos de normas matriciais:
 
-- Norma 1 (Norma da Coluna Máxima, $ p = 1 $):
+- Norma 1 (Norma da Coluna Máxima, $` p = 1 `$):
   ```math
 
   \|A\|_1 = \max_{1 \leq j \leq n} \sum_{i=1}^{m} |a_{ij}|
@@ -900,13 +900,13 @@ norm1
 
 
 
-- Norma 2 (Norma Espectral, $ p = 2 $ ):
+- Norma 2 (Norma Espectral, $` p = 2 `$ ):
   ```math
 
   \|A\|_2 = \sqrt{\lambda_{\text{max}}}\,,
   ```
 
-  sendo  $ \lambda_{\text{max}}$ maior autovalor de $ A^{\dagger}A $. Aqui $A^{\dagger}$ é a matriz hermitiana conjugada de $A$. Se $A$ for real, $A^{\dagger}=A^T$ Em Python, 
+  sendo  $` \lambda_{\text{max}}`$ maior autovalor de $` A^{\dagger}A `$. Aqui $`A^{\dagger}`$ é a matriz hermitiana conjugada de $`A`$. Se $`A`$ for real, $`A^{\dagger}=A^T`$ Em Python, 
 
 
 ```python
@@ -921,7 +921,7 @@ norm2
 
 
 
-- Norma Infinito (Norma da Linha Máxima, $ p = \infty $):
+- Norma Infinito (Norma da Linha Máxima, $` p = \infty `$):
 
   ```math
 
@@ -971,7 +971,7 @@ Normas matriciais podem ser usadas para estabelecer critérios de parada em algo
 
 ### 9. Número de condicionamento de uma matriz
 
-O número de condicionamento de uma matriz $ A $ é definido como:
+O número de condicionamento de uma matriz `$ A `$ é definido como:
 
 ```math
 
@@ -979,7 +979,7 @@ O número de condicionamento de uma matriz $ A $ é definido como:
 ```
 
 
-sendo $ \|A\| $ a norma da matriz $ A$, e $ \|A^{-1}\| $ é a norma de sua inversa.  
+sendo  $`\|A\| `$ a norma da matriz $` A$, e $` \|A^{-1}\| `$ é a norma de sua inversa.  
 
 Esta é uma medida que indica a sensibilidade da solução de um sistema linear em relação a mudanças nos dados de entrada. Um número de condicionamento elevado sugere que a matriz pode causar problemas numéricos, como soluções instáveis ou imprecisas.
 
