@@ -552,7 +552,7 @@ A_int
 
 ### 6. Definindo matrizes por uma lei de formação
 
-Podemos definir uma matriz de acordo com uma lei de formação para seus elementos $`a_{ij}$. O modo mais imediato, mas não eficiente,  é o seguinte:
+Podemos definir uma matriz de acordo com uma lei de formação para seus elementos $`a_{ij}`$. O modo mais imediato, mas não eficiente,  é o seguinte:
 
 
 ```python
@@ -617,7 +617,7 @@ A
 
 ### 7. Operações com matrizes
 
-Seja a matrix  $M$ dada por:  
+Seja a matrix  $`M`$ dada por:  
 
 
 ```python
@@ -840,33 +840,22 @@ As normas matriciais são amplamente utilizadas em álgebra linear, análise num
 Uma função $` \|\cdot\|: \mathbb{R}^{m \times n} \rightarrow \mathbb{R} `$ é considerada uma norma matricial se satisfizer as seguintes condições:
 
 1. Subaditividade (Desigualdade Triangular):
-   ```math
 
-  \|A + B\| \leq \|A\| + \|B\| \quad \text{para todas as matrizes } A \text{ e } B \text{ de mesma dimensão}.
-   ```
+
+  $`\|A + B\| \leq \|A\| + \|B\| `$ para todas as matrizes  $`A`$ e  $`B`$ de mesma dimensão.
 
 
 2. Multiplicação Escalar:
-   ```math
 
-   \|\alpha A\| = |\alpha| \cdot \|A\| \quad \text{para todo escalar } \alpha \text{ e matriz } A.
-   ```
-
+  $` \|\alpha A\| = |\alpha| \cdot \|A\| `$ para todo escalar e matriz  A.
 
 3. Não-Negatividade e Definitividade:
-  ```math
 
-   \|A\| \geq 0 \quad \text{e} \quad \|A\| = 0 \text{ se e somente se } A = 0.
-   ```
+  $` \|A\| \geq 0 \quad `$ e $`\quad \|A\| = 0 $` se e somente se  $`A = 0$`.
 
-   
 4. Compatibilidade com a Multiplicação Matricial:
 
-   \|AB\| \leq \|A\| \cdot \|B\| \quad \text{para todas as matrizes } A \text{ e } B \text{ onde o produto } AB \text{ é definido}.
-
-
-
-
+ $`   \|AB\| \leq \|A\| \cdot \|B\| `$ para todas as matrizes A e  B  onde o produto  AB  é definido.
 
 Examinemos os principais tipos de normas matriciais:
 
@@ -913,9 +902,6 @@ norm1
 norm2 = np.linalg.norm(A, 2)
 norm2
 ```
-
-
-
 
     16.84810335261421
 
