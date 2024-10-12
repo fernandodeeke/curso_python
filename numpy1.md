@@ -338,6 +338,10 @@ np.sum(c, axis=0)
 
 
 
+Acima, somamos os elementos das duas matrizes: 1+7 = 8, 2+8 = 10, 3+9 = 12, etc.
+
+Façamos uma soma ao longo do segundo eixo:
+
 
 ```python
 np.sum(c, axis=1)  
@@ -351,6 +355,11 @@ np.sum(c, axis=1)
 
 
 
+Agora somamos, elemento a elemento, as linhas de cada um dos arrays 2D: 
+1+4 = 5,  2+5 = 7, etc. 
+
+Somando ao longo do terceiro eixo temos:
+
 
 ```python
 np.sum(c, axis=2)
@@ -363,6 +372,9 @@ np.sum(c, axis=2)
            [24, 33]])
 
 
+
+Acima somamos, termo a termo, as colunas de cada um dos arrays 2D:
+1+2+3 = 6, 4+5+6 = 15, etc. 
 
 ### 6. Criando 1-arrays especiais
 Podemos criar alguns 1-arrays especiais de forma rápida:
@@ -498,68 +510,6 @@ Vejamos em maior detalhe a manipulação de índices de arrays 1-dimensionais. S
 a=np.array([3,4,2,1,7,9])
 ```
 
-O primeiro índice do *array* é 0. Por exemplo,
-
-
-```python
-print(a[0])
-print(a[1])
-```
-
-    3
-    4
-
-
-No entanto, em alguns problemas é útil especificar componentes por índices negativos. Vejamos alguns exemplos para entender como funcionam:
-
-
-```python
-a[-1] #último elemento do array
-```
-
-
-
-
-    9
-
-
-
-
-```python
-a[-2]
-```
-
-
-
-
-    7
-
-
-
-
-```python
-a[-3]
-```
-
-
-
-
-    1
-
-
-
-
-```python
-a[-5] #primeiro elemento
-```
-
-
-
-
-    4
-
-
-
 Suponhamos que queremos listar os elementos de um dado array de *N*-dimensional do elemento *n* até o elemento *m*. Por exemplo se queremos as três primeiras componentes de *a* , começando da segunda componente, procedemos do seguinte modo:
 
 
@@ -674,7 +624,7 @@ np.concatenate([x,y])
 
 ### 8. Operações matemáticas com  arrays 1D
 
-Podemos realizar operações matemáticas sobre 1-arrays, elemento por elemento:
+Podemos realizar operações matemáticas sobre arrays 1D, elemento por elemento:
 
 
 ```python
@@ -1117,7 +1067,7 @@ a_div4
 
 
 
-Procedimentos relativamente complicados por ser implementados facilmente com Numpy. Por exemplo, Somemos os números inteiros de 0 a 10000, exceto aqueles que podem ser divididos por 4 e 7.
+Procedimentos relativamente complicados podem ser implementados facilmente com Numpy. Por exemplo, consideremos que consiste em somar números inteiros de 0 a 10000, exceto aqueles que podem ser divididos por 4 e 7.
 
 Inicialmente geramos o array de todos os inteiros de 0 a 10000:
 
@@ -1714,7 +1664,7 @@ plt.show()
 
 
     
-![png](output_215_0.png)
+![png](output_211_0.png)
     
 
 
@@ -1828,7 +1778,7 @@ plt.show()
 
 
     
-![png](output_225_0.png)
+![png](output_221_0.png)
     
 
 
@@ -2165,7 +2115,7 @@ A
 
 
 
-Note que este loop não é eficiente para arrays 1D muito longos. Em tal caso, é preferível uma forma vetorizada, que envolve funções que não estudamos aqui. 
+Note que este loop não é eficiente para arrays 1D muito longos. Em tal caso, é preferível uma forma vetorizada, que envolve funções estudaremos mais adiante. 
 
 ### 12. Exercícios
 
